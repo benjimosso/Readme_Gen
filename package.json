@@ -1,0 +1,26 @@
+{
+  "name": "readme_gen",
+  "version": "1.0.0",
+  "description": "Read Me Generator Application",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjimosso/Readme_Gen.git"
+  },
+  "keywords": [
+    "README_GEN"
+  ],
+  "author": "Daniel Mosso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjimosso/Readme_Gen/issues"
+  },
+  "homepage": "https://github.com/benjimosso/Readme_Gen#readme"
+}
