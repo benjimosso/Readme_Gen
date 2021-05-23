@@ -4,7 +4,7 @@
   "description": "Read Me Generator Application",
   "main": "index.js",
   "dependencies": {
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.1.0"
   },
   "devDependencies": {},
   "scripts": {
