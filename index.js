@@ -44,25 +44,68 @@ const questions = [{
     {
         type: 'list',
         message: 'What is your project license',
-        choices: ['MIT', 'GNU GPL v3', 'Mozilla Public License 2.0', ],
+        choices: ['MIT', 'GNU GPL v3', 'ISC', ],
         name: 'License'
     },
 
 ]
 
 inquirer.prompt(questions).then((data) => {
-    if (data.License === 'Mozilla Public License 2.0') {
-        data.License = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+    let LIC = data.License
+        // data.license.join(LIC)
+    console.log(LIC)
+        // const MIT = data.License.value
+        // console.log(data.License.value)
+    if (data.License === 'ISC') {
+        data.License = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
     }
     if (data.License === 'GNU GPL v3') {
         data.License = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-    } else {
+    }
+    if (data.License === 'MIT') {
         data.License = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
     }
     console.log(data.License)
 
-    const README = `# License
-    ${data.License}`
+    const README = `
+    # **${data.ProjName}**
+    ## License
+    ${data.License}
+    ## Description
+    ${data.description}
+    ## Table Of Contents
+    1. [ Installation. ](#installation)
+    2. [ Usage tips. ](#usage)
+    3. [ License. ](#license)
+    4. [ Contributing ](#contributing)
+    5. [ Test ](#test)
+    6. [ Questions. ](#questions)
+
+    <a name="Inst"></a>
+    ## Installation
+    **To install necesary dependencies, run the following command:**
+    \`\`\`
+    - ${data.installation_commands}
+    \`\`\`
+    <a name="usage"></a>
+    ## Usage
+    ${data.repo_usage}
+    <a name="lic"></a>
+    ## License
+    ### This project is license under the ${LIC} license
+    <a name="contr"></a>
+    ## Contributing
+    ### ${data.contribution}
+    <a name="test"></a>
+    ## Test
+    **To run tests, run the following command:**
+    \`\`\`
+    - ${data.test}
+    \`\`\`
+    <a name="quest"></a>
+    ### Questions
+    If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub}](https://github.com/${data.githubuser}/).
+  `
 
     fs.writeFile('READMETEST.md', README, (err) =>
         err ? console.log(err) : console.log('Success!')
