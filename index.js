@@ -100,7 +100,7 @@ ${data.contribution}
 \`\`\`
 <a name="questions"></a>
 ### Questions :raising_hand_man:
-If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub}](https://github.com/${data.githubuser}/).
+If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub](https://github.com/${data.githubuser}/).
 `
 
     fs.writeFile('READMEFINAL.md', README, (err) =>
