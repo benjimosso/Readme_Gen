@@ -1,9 +1,9 @@
 
-    # **Read me Generator**
+    # **ReadMe Generator**
     ## License
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     ## Description
-    Application to create a Read me file.
+    application to create readme.md files.
     ## Table Of Contents
     1. [ Installation. ](#installation)
     2. [ Usage tips. ](#usage)
@@ -13,27 +13,27 @@
     6. [ Questions. ](#questions)
 
     <a name="Inst"></a>
-    ## Installation
+    ## Installation :computer:
     **To install necesary dependencies, run the following command:**
     ```
     - npm -i inquirer
     ```
     <a name="usage"></a>
-    ## Usage
-    Use it with Wosdom
+    ## Usage :green_book:
+    You need to run it on Node.js
     <a name="lic"></a>
-    ## License
-    ### This project is license under the MIT license
+    ## License :scroll:
+    **This project is license under the MIT license**
     <a name="contr"></a>
-    ## Contributing
-    ### you can make contributions as you please
+    ## Contributing :brain:
+    Feel free to contribute.
     <a name="test"></a>
-    ## Test
+    ## Test :keyboard:
     **To run tests, run the following command:**
     ```
     - npm test
     ```
     <a name="quest"></a>
-    ### Questions
+    ### Questions :raising_hand_man:
     If you have any questions about the repo, open an issue or contact me  directly at benjimosso@gmail.com. You can find more of my work at [GitHub}](https://github.com/benjimosso/).
   

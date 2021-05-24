@@ -82,32 +82,32 @@ inquirer.prompt(questions).then((data) => {
     6. [ Questions. ](#questions)
 
     <a name="Inst"></a>
-    ## Installation
+    ## Installation :computer:
     **To install necesary dependencies, run the following command:**
     \`\`\`
     - ${data.installation_commands}
     \`\`\`
     <a name="usage"></a>
-    ## Usage
+    ## Usage :green_book:
     ${data.repo_usage}
     <a name="lic"></a>
-    ## License
-    ### This project is license under the ${LIC} license
+    ## License :scroll:
+    **This project is license under the ${LIC} license**
     <a name="contr"></a>
-    ## Contributing
-    ### ${data.contribution}
+    ## Contributing :brain:
+    ${data.contribution}
     <a name="test"></a>
-    ## Test
+    ## Test :keyboard:
     **To run tests, run the following command:**
     \`\`\`
     - ${data.test}
     \`\`\`
     <a name="quest"></a>
-    ### Questions
+    ### Questions :raising_hand_man:
     If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub}](https://github.com/${data.githubuser}/).
   `
 
-    fs.writeFile('READMETEST.md', README, (err) =>
+    fs.writeFile('READMEFINAL.md', README, (err) =>
         err ? console.log(err) : console.log('Success!')
     );
 
