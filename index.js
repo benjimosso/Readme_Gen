@@ -52,10 +52,7 @@ const questions = [{
 
 inquirer.prompt(questions).then((data) => {
     let LIC = data.License
-        // data.license.join(LIC)
-    console.log(LIC)
-        // const MIT = data.License.value
-        // console.log(data.License.value)
+
     if (data.License === 'ISC') {
         data.License = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
     }
@@ -65,47 +62,46 @@ inquirer.prompt(questions).then((data) => {
     if (data.License === 'MIT') {
         data.License = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
     }
-    console.log(data.License)
 
     const README = `
-    # **${data.ProjName}**
-    ## License
-    ${data.License}
-    ## Description
-    ${data.description}
-    ## Table Of Contents
-    1. [ Installation. ](#installation)
-    2. [ Usage tips. ](#usage)
-    3. [ License. ](#license)
-    4. [ Contributing ](#contributing)
-    5. [ Test ](#test)
-    6. [ Questions. ](#questions)
+# **${data.ProjName}**
+## License
+${data.License}
+## Description
+${data.description}
+## Table Of Contents
+1. [ Installation. ](#installation)
+2. [ Usage tips. ](#usage)
+3. [ License. ](#license)
+4. [ Contributing ](#contributing)
+5. [ Test ](#test)
+6. [ Questions. ](#questions)
 
-    <a name="Inst"></a>
-    ## Installation :computer:
-    **To install necesary dependencies, run the following command:**
-    \`\`\`
-    - ${data.installation_commands}
-    \`\`\`
-    <a name="usage"></a>
-    ## Usage :green_book:
-    ${data.repo_usage}
-    <a name="lic"></a>
-    ## License :scroll:
-    **This project is license under the ${LIC} license**
-    <a name="contr"></a>
-    ## Contributing :brain:
-    ${data.contribution}
-    <a name="test"></a>
-    ## Test :keyboard:
-    **To run tests, run the following command:**
-    \`\`\`
-    - ${data.test}
-    \`\`\`
-    <a name="quest"></a>
-    ### Questions :raising_hand_man:
-    If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub}](https://github.com/${data.githubuser}/).
-  `
+<a name="installation"></a>
+## Installation :computer:
+**To install necesary dependencies, run the following command:**
+\`\`\`
+- ${data.installation_commands}
+\`\`\`
+<a name="usage"></a>
+## Usage :green_book:
+${data.repo_usage}
+<a name="license"></a>
+## License :scroll:
+**This project is license under the ${LIC} license**
+<a name="contributing"></a>
+## Contributing :brain:
+${data.contribution}
+<a name="test"></a>
+## Test :keyboard:
+**To run tests, run the following command:**
+\`\`\`
+- ${data.test}
+\`\`\`
+<a name="questions"></a>
+### Questions :raising_hand_man:
+If you have any questions about the repo, open an issue or contact me  directly at ${data.email}. You can find more of my work at [GitHub}](https://github.com/${data.githubuser}/).
+`
 
     fs.writeFile('READMEFINAL.md', README, (err) =>
         err ? console.log(err) : console.log('Success!')
